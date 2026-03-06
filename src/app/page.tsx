@@ -18,8 +18,8 @@ export default function HomePage() {
       <DestinationsSection />
       <StatsSection />
       <RecommendedBySection />
-      <AirlinesSection />
       <ServicesSection />
+      <AirlinesSection />
       <CEOSection />
       <CTASection />
     </>
