@@ -10,7 +10,7 @@ const services = [
     title: "Flight Bookings",
     subtitle: "Domestic & International",
     description: "Competitive insider fares, flexible options, and professional support for leisure and business travel.",
-    image: "/services/Flight Bookings.jpg",
+    image: "/services/flight-bookings.jpg",
     color: "orange" as const,
   },
   {
@@ -18,7 +18,7 @@ const services = [
     title: "Luxury Stays",
     subtitle: "Boutique Villas & 5-Star Resorts",
     description: "Hand-picked properties that reflect comfort, quality, and exceptional service worldwide.",
-    image: "/services/Luxury Stays.jpg",
+    image: "/services/luxury-stays.jpg",
     color: "blue" as const,
   },
   {
@@ -26,7 +26,7 @@ const services = [
     title: "Corporate Travel",
     subtitle: "For Business Executives",
     description: "Efficient, discreet travel management meeting the highest standards of precision.",
-    image: "/services/Corporate Travel.jpg",
+    image: "/services/corporate-travel.jpg",
     color: "orange" as const,
   },
   {
@@ -34,7 +34,7 @@ const services = [
     title: "Private Charters",
     subtitle: "Exclusive Aviation Solutions",
     description: "Private and charter flights tailored to your schedule, privacy, and comfort.",
-    image: "/services/Private Charters.jpg",
+    image: "/services/private-charters.jpg",
     color: "blue" as const,
   },
   {
@@ -42,7 +42,7 @@ const services = [
     title: "VIP Ground Services",
     subtitle: "Meet & Greet + Transfers",
     description: "Priority airport assistance and luxury transfers from the moment you land.",
-    image: "/services/VIP Ground Services.jpg",
+    image: "/services/vip-ground-services.jpg",
     color: "orange" as const,
   },
   {
@@ -50,7 +50,7 @@ const services = [
     title: "Essential Travel",
     subtitle: "Visa, Insurance & Consultation",
     description: "Visa assistance, travel insurance, and personalised consultations — one-stop shop.",
-    image: "/services/Honeymoon.jpg",
+    image: "/services/essential-travel.jpg",
     color: "blue" as const,
   },
 ];

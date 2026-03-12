@@ -12,7 +12,7 @@ const services = [
     id: "flights",
     icon: Plane,
     emoji: "✈",
-    image: "/services/Flight Bookings.jpg",
+    image: "/services/flight-bookings.jpg",
     title: "Flight Bookings",
     subtitle: "Domestic & International",
     description:
@@ -31,7 +31,7 @@ const services = [
     id: "stays",
     icon: Building2,
     emoji: "🏨",
-    image: "/services/Luxury Stays.jpg",
+    image: "/services/luxury-stays.jpg",
     title: "Luxury Stays",
     subtitle: "Boutique Villas & 5-Star Resorts",
     description:
@@ -50,7 +50,7 @@ const services = [
     id: "honeymoon",
     icon: Heart,
     emoji: "💍",
-    image: "/services/Honeymoon.jpg",
+    image: "/services/honeymoon.jpg",
     title: "Honeymoon Packages",
     subtitle: "Bespoke Romantic Journeys",
     description:
@@ -69,7 +69,7 @@ const services = [
     id: "corporate",
     icon: Briefcase,
     emoji: "💼",
-    image: "/services/Corporate Travel.jpg",
+    image: "/services/corporate-travel.jpg",
     title: "Corporate Travel",
     subtitle: "For Business Executives",
     description:
@@ -88,7 +88,7 @@ const services = [
     id: "charters",
     icon: Radio,
     emoji: "🛩",
-    image: "/services/Private Charters.jpg",
+    image: "/services/private-charters.jpg",
     title: "Private Charters",
     subtitle: "Exclusive Aviation Solutions",
     description:
@@ -107,7 +107,7 @@ const services = [
     id: "vip",
     icon: Star,
     emoji: "⭐",
-    image: "/services/VIP Ground Services.jpg",
+    image: "/services/vip-ground-services.jpg",
     title: "VIP Ground Services",
     subtitle: "Meet & Greet + Transfers",
     description:
@@ -126,7 +126,7 @@ const services = [
     id: "essential",
     icon: Shield,
     emoji: "🛡",
-    image: null,
+    image: "/services/essential-travel.jpg",
     title: "Essential Travel Services",
     subtitle: "Visa, Insurance & Consultation",
     description:
