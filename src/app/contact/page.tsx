@@ -51,7 +51,7 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const msg = `New Enquiry — Memories by Lee Travels
+    const msg = `New Enquiry | Memories by Lee Travels
 
 Name: ${form.name}
 Phone: ${form.phone}
@@ -102,8 +102,8 @@ Message: ${form.message || "No additional message"}`;
             transition={{ delay: 0.2 }}
             className="text-white/60 text-lg max-w-xl mx-auto"
           >
-            Fill in your details and we&apos;ll connect with you on WhatsApp instantly —
-            because great journeys begin with a great conversation.
+            Fill in your details and we&apos;ll connect with you on WhatsApp instantly.
+            Great journeys begin with a great conversation.
           </motion.p>
         </div>
       </section>

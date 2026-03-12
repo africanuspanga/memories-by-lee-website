@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Plane, Building2, Heart, Briefcase, Radio, Star, Shield, Check } from "lucide-react";
@@ -11,6 +12,7 @@ const services = [
     id: "flights",
     icon: Plane,
     emoji: "✈",
+    image: "/services/Flight Bookings.jpg",
     title: "Flight Bookings",
     subtitle: "Domestic & International",
     description:
@@ -29,6 +31,7 @@ const services = [
     id: "stays",
     icon: Building2,
     emoji: "🏨",
+    image: "/services/Luxury Stays.jpg",
     title: "Luxury Stays",
     subtitle: "Boutique Villas & 5-Star Resorts",
     description:
@@ -47,6 +50,7 @@ const services = [
     id: "honeymoon",
     icon: Heart,
     emoji: "💍",
+    image: "/services/Honeymoon.jpg",
     title: "Honeymoon Packages",
     subtitle: "Bespoke Romantic Journeys",
     description:
@@ -65,6 +69,7 @@ const services = [
     id: "corporate",
     icon: Briefcase,
     emoji: "💼",
+    image: "/services/Corporate Travel.jpg",
     title: "Corporate Travel",
     subtitle: "For Business Executives",
     description:
@@ -83,6 +88,7 @@ const services = [
     id: "charters",
     icon: Radio,
     emoji: "🛩",
+    image: "/services/Private Charters.jpg",
     title: "Private Charters",
     subtitle: "Exclusive Aviation Solutions",
     description:
@@ -101,6 +107,7 @@ const services = [
     id: "vip",
     icon: Star,
     emoji: "⭐",
+    image: "/services/VIP Ground Services.jpg",
     title: "VIP Ground Services",
     subtitle: "Meet & Greet + Transfers",
     description:
@@ -119,6 +126,7 @@ const services = [
     id: "essential",
     icon: Shield,
     emoji: "🛡",
+    image: null,
     title: "Essential Travel Services",
     subtitle: "Visa, Insurance & Consultation",
     description:
@@ -196,33 +204,49 @@ export default function ServicesPage() {
                     !isEven ? "lg:flex-row-reverse" : ""
                   }`}
                 >
-                  {/* Icon card */}
+                  {/* Image panel */}
                   <div
                     className={`order-2 ${!isEven ? "lg:order-1" : "lg:order-2"} flex justify-center`}
                   >
-                    <div
-                      className={`relative w-full max-w-sm rounded-3xl p-6 sm:p-10 flex flex-col items-center justify-center gap-4 min-h-48 sm:min-h-60 ${
-                        isOrange
-                          ? "bg-gradient-to-br from-orange-50 to-orange-100/50 border border-orange-100"
-                          : "bg-gradient-to-br from-blue-50 to-blue-100/50 border border-blue-100"
-                      }`}
-                    >
-                      <div
-                        className={`w-20 h-20 rounded-3xl flex items-center justify-center text-4xl shadow-lg ${
-                          isOrange ? "bg-[#f5921e]" : "bg-[#26abe0]"
-                        }`}
-                      >
-                        <span>{service.emoji}</span>
-                      </div>
-                      <div className="text-center">
-                        <p
-                          className={`text-2xl font-bold ${
-                            isOrange ? "text-[#f5921e]" : "text-[#26abe0]"
+                    <div className="relative w-full max-w-sm rounded-3xl overflow-hidden shadow-xl aspect-[4/3] group">
+                      {service.image ? (
+                        <>
+                          <Image
+                            src={service.image}
+                            alt={service.title}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                            unoptimized
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/20 to-transparent" />
+                        </>
+                      ) : (
+                        <div
+                          className={`w-full h-full flex flex-col items-center justify-center gap-4 ${
+                            isOrange
+                              ? "bg-gradient-to-br from-orange-50 to-orange-100"
+                              : "bg-gradient-to-br from-blue-50 to-blue-100"
                           }`}
                         >
+                          <div
+                            className={`w-20 h-20 rounded-3xl flex items-center justify-center text-4xl shadow-lg ${
+                              isOrange ? "bg-[#f5921e]" : "bg-[#26abe0]"
+                            }`}
+                          >
+                            <span>{service.emoji}</span>
+                          </div>
+                        </div>
+                      )}
+                      {/* Badge */}
+                      <div className="absolute bottom-4 left-4 right-4">
+                        <div
+                          className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-white text-sm font-bold ${
+                            isOrange ? "bg-[#f5921e]" : "bg-[#26abe0]"
+                          }`}
+                        >
+                          <span>{service.emoji}</span>
                           {service.title}
-                        </p>
-                        <p className="text-gray-500 text-sm mt-1">{service.subtitle}</p>
+                        </div>
                       </div>
                     </div>
                   </div>

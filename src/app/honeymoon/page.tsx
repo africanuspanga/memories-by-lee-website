@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Check, MessageCircle } from "lucide-react";
+import { Plane, Users, Car, Building2, Heart, Shield, FileText, Clock, Gift, Sparkles, MessageCircle } from "lucide-react";
 import SectionDivider from "@/components/SectionDivider";
 
 const WA_NUMBER = "255742243243";
@@ -12,16 +12,16 @@ const WA_MESSAGE = encodeURIComponent(
 );
 
 const inclusions = [
-  "Fully bespoke itinerary planning",
-  "Return flights (economy, business or first class)",
-  "Airport meet & greet service",
-  "Private airport transfers",
-  "Hand-selected luxury accommodation",
-  "Curated romantic activities",
-  "Travel insurance options",
-  "Visa assistance where needed",
-  "24/7 dedicated trip support",
-  "Welcome honeymoon hamper",
+  { icon: Sparkles, title: "Bespoke Itinerary", detail: "Fully custom-planned, just for you" },
+  { icon: Plane, title: "Return Flights", detail: "Economy, business or first class" },
+  { icon: Users, title: "Meet & Greet", detail: "VIP airport welcome on arrival" },
+  { icon: Car, title: "Private Transfers", detail: "Luxury vehicle, door to door" },
+  { icon: Building2, title: "Luxury Accommodation", detail: "Hand-selected 5-star stays" },
+  { icon: Heart, title: "Romantic Activities", detail: "Curated experiences for two" },
+  { icon: Shield, title: "Travel Insurance", detail: "Full coverage, total peace of mind" },
+  { icon: FileText, title: "Visa Assistance", detail: "Handled wherever needed" },
+  { icon: Clock, title: "24/7 Support", detail: "We're always on call for you" },
+  { icon: Gift, title: "Honeymoon Hamper", detail: "A welcome gift to start your trip" },
 ];
 
 const packages = [
@@ -214,45 +214,84 @@ export default function HoneymoonPage() {
       </section>
 
       {/* What's Included */}
-      <section className="py-24 bg-white">
-        <div className="section-container">
+      <section className="py-24 bg-navy relative overflow-hidden">
+        {/* Background dot pattern */}
+        <div
+          className="absolute inset-0 opacity-[0.04]"
+          style={{
+            backgroundImage: "radial-gradient(circle, #f5921e 1px, transparent 1px)",
+            backgroundSize: "36px 36px",
+          }}
+        />
+        {/* Glow accents */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#f5921e]/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#26abe0]/10 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="section-container relative z-10">
+          {/* Header */}
           <div className="text-center mb-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 text-[#f5921e] text-xs font-bold uppercase tracking-widest mb-4"
+              className="inline-flex items-center gap-2 bg-[#f5921e]/15 border border-[#f5921e]/30 text-[#f5921e] text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6"
             >
-              ✓ What&apos;s Included
+              ✦ What&apos;s Included
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-4xl font-bold text-navy"
+              className="text-4xl sm:text-5xl font-bold text-white mb-4"
             >
-              Everything Covered —{" "}
-              <span className="text-[#f5921e]">Zero Stress</span>
+              Everything Covered.{" "}
+              <span className="text-[#f5921e]">Zero Stress.</span>
             </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="text-white/50 text-lg max-w-xl mx-auto"
+            >
+              Every detail of your honeymoon is handled. All you bring is each other.
+            </motion.p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-4xl mx-auto">
-            {inclusions.map((item, index) => (
-              <motion.div
-                key={item}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="flex items-start gap-3 p-4 rounded-2xl bg-orange-50/60 border border-orange-100"
-              >
-                <div className="w-6 h-6 rounded-full bg-[#f5921e] flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <Check size={12} className="text-white" />
-                </div>
-                <span className="text-navy text-sm font-medium leading-snug">{item}</span>
-              </motion.div>
-            ))}
+          {/* Inclusion cards */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {inclusions.map((item, index) => {
+              const Icon = item.icon;
+              const isOrange = index % 2 === 0;
+              return (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.06 }}
+                  className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#f5921e]/40 rounded-2xl p-5 flex flex-col gap-3 transition-all duration-300 cursor-default"
+                >
+                  <div
+                    className={`w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
+                      isOrange
+                        ? "bg-[#f5921e]/20 group-hover:bg-[#f5921e]/30"
+                        : "bg-[#26abe0]/20 group-hover:bg-[#26abe0]/30"
+                    }`}
+                  >
+                    <Icon
+                      size={18}
+                      className={isOrange ? "text-[#f5921e]" : "text-[#26abe0]"}
+                    />
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold text-sm leading-snug">{item.title}</p>
+                    <p className="text-white/45 text-xs mt-0.5 leading-snug">{item.detail}</p>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
