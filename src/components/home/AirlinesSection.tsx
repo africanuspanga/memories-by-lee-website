@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const airlines = [
-  { src: "/Airline Partners logo/Air_Tanzania_logo.svg.png", alt: "Air Tanzania" },
-  { src: "/Airline Partners logo/Ethiopian-Airlines-Logo-before-2003-1.png", alt: "Ethiopian Airlines" },
-  { src: "/Airline Partners logo/KLM_logo.svg", alt: "KLM" },
-  { src: "/Airline Partners logo/Qatar_Airways_Logo.png", alt: "Qatar Airways" },
-  { src: "/Airline Partners logo/South-African-Airways-Logo.jpg", alt: "South African Airways" },
-  { src: "/Airline Partners logo/Turkish_Airlines_logo.png", alt: "Turkish Airlines" },
+  { src: "/Airline Partners logo/Air_Tanzania_logo.svg.png", alt: "Air Tanzania", large: false },
+  { src: "/Airline Partners logo/Ethiopian-Airlines-Logo-before-2003-1.png", alt: "Ethiopian Airlines", large: true },
+  { src: "/Airline Partners logo/KLM_logo.svg", alt: "KLM", large: false },
+  { src: "/Airline Partners logo/Qatar_Airways_Logo.png", alt: "Qatar Airways", large: false },
+  { src: "/Airline Partners logo/South-African-Airways-Logo.jpg", alt: "South African Airways", large: true },
+  { src: "/Airline Partners logo/Turkish_Airlines_logo.png", alt: "Turkish Airlines", large: false },
 ];
 
 export default function AirlinesSection() {
@@ -63,14 +63,16 @@ export default function AirlinesSection() {
             <div
               key={i}
               className="flex-shrink-0 bg-white rounded-2xl px-8 py-5 flex items-center justify-center border border-gray-100 shadow-sm hover:shadow-md hover:border-[#26abe0]/30 transition-all duration-300"
-              style={{ height: 88, minWidth: 180 }}
+              style={{ height: 88, minWidth: airline.large ? 220 : 180 }}
             >
               <Image
                 src={airline.src}
                 alt={airline.alt}
-                width={130}
-                height={45}
-                className="object-contain h-10 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
+                width={airline.large ? 170 : 130}
+                height={airline.large ? 60 : 45}
+                className={`object-contain w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 ${
+                  airline.large ? "h-14" : "h-10"
+                }`}
               />
             </div>
           ))}

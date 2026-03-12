@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Clock, MessageCircle, Send } from "lucide-react";
+import { MapPin, Phone, Clock, Mail, Instagram, MessageCircle, Send } from "lucide-react";
 
 const WA_NUMBER = "255742243243";
 
@@ -160,6 +160,38 @@ Message: ${form.message || "No additional message"}`;
                       className="text-gray-500 text-sm hover:text-navy transition-colors block"
                     >
                       +255 754 243 207
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-5 bg-orange-50 rounded-2xl border border-orange-100">
+                  <div className="w-10 h-10 rounded-xl bg-[#f5921e] flex items-center justify-center flex-shrink-0">
+                    <Mail size={18} className="text-white" />
+                  </div>
+                  <div>
+                    <p className="text-navy font-semibold text-sm mb-1">Email</p>
+                    <a
+                      href="mailto:memoriesbyleetravels@gmail.com"
+                      className="text-gray-500 text-sm hover:text-navy transition-colors break-all"
+                    >
+                      memoriesbyleetravels@gmail.com
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-5 bg-pink-50 rounded-2xl border border-pink-100">
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)" }}>
+                    <Instagram size={18} className="text-white" />
+                  </div>
+                  <div>
+                    <p className="text-navy font-semibold text-sm mb-1">Instagram</p>
+                    <a
+                      href="https://www.instagram.com/memoriesbylee/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-500 text-sm hover:text-navy transition-colors"
+                    >
+                      @memoriesbylee
                     </a>
                   </div>
                 </div>

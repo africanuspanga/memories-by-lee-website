@@ -2,6 +2,7 @@ import HeroSection from "@/components/home/HeroSection";
 import WhatYouGetSection from "@/components/home/WhatYouGetSection";
 import HoneymoonSection from "@/components/home/HoneymoonSection";
 import DestinationsSection from "@/components/home/DestinationsSection";
+import MafiaSpotlightSection from "@/components/home/MafiaSpotlightSection";
 import StatsSection from "@/components/home/StatsSection";
 import RecommendedBySection from "@/components/home/RecommendedBySection";
 import AirlinesSection from "@/components/home/AirlinesSection";
@@ -16,6 +17,7 @@ export default function HomePage() {
       <WhatYouGetSection />
       <HoneymoonSection />
       <DestinationsSection />
+      <MafiaSpotlightSection />
       <StatsSection />
       <RecommendedBySection />
       <ServicesSection />

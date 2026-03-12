@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { Star, Award, Briefcase } from "lucide-react";
 
@@ -23,16 +24,15 @@ export default function CEOSection() {
             transition={{ duration: 0.7 }}
             className="relative"
           >
-            <div className="relative rounded-3xl overflow-hidden aspect-[3/4] max-w-sm mx-auto lg:mx-0 shadow-2xl bg-gray-100 border-2 border-dashed border-gray-300 flex items-center justify-center">
-              {/* Photo placeholder — replace with CEO photo */}
-              <div className="flex flex-col items-center gap-3 text-gray-400 p-8 text-center">
-                <div className="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                  </svg>
-                </div>
-                <p className="text-sm font-medium">CEO Photo Coming Soon</p>
-              </div>
+            <div className="relative rounded-3xl overflow-hidden aspect-[3/4] max-w-sm mx-auto lg:mx-0 shadow-2xl">
+              <Image
+                src="/CEO IMAGE-MEMORIES BY LEE.jpg"
+                alt="Hellen Rhobi — CEO & Founder, Memories by Lee Travels"
+                fill
+                className="object-cover"
+                unoptimized
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent" />
 
               {/* Card overlay */}
               <div className="absolute bottom-4 left-4 right-4 bg-white rounded-2xl p-4 shadow-lg">

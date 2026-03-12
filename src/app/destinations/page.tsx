@@ -16,7 +16,7 @@ const destinations = [
     country: "Tanzania",
     rating: 4.9,
     description:
-      "Pristine white-sand beaches, turquoise Indian Ocean waters, and the UNESCO World Heritage-listed Stone Town. Zanzibar is Tanzania's crown jewel — perfect for beach honeymoons, cultural exploration, and pure relaxation.",
+      "Pristine white-sand beaches, turquoise Indian Ocean waters, and the UNESCO World Heritage-listed Stone Town. Zanzibar is Tanzania's crown jewel, perfect for beach honeymoons, cultural exploration, and pure relaxation.",
     highlights: [
       "Nungwi Beach",
       "Stone Town",
@@ -220,7 +220,7 @@ export default function DestinationsPage() {
             transition={{ delay: 0.2 }}
             className="text-white/60 text-lg max-w-2xl leading-relaxed"
           >
-            From Tanzania&apos;s pristine beaches to the ancient streets of Istanbul — we
+            From Tanzania&apos;s pristine beaches to the ancient streets of Istanbul, we
             craft personalised journeys to the world&apos;s most extraordinary destinations.
           </motion.p>
         </div>
@@ -330,7 +330,7 @@ export default function DestinationsPage() {
       </section>
 
       {/* ── Mafia Island Special Feature Section ── */}
-      <section className="relative overflow-hidden bg-navy">
+      <section id="mafia" className="relative overflow-hidden bg-navy">
         {/* Full-bleed background image */}
         <div className="absolute inset-0">
           <Image
@@ -366,7 +366,7 @@ export default function DestinationsPage() {
               transition={{ delay: 0.1 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
             >
-              Mafia Island —{" "}
+              Mafia Island:{" "}
               <span className="text-[#f5921e]">A Couple&apos;s Paradise</span>{" "}
               Like No Other
             </motion.h2>
@@ -424,7 +424,7 @@ export default function DestinationsPage() {
                 we want to keep it that way. We&apos;ll take you there before everyone else does.&rdquo;
               </p>
               <cite className="text-[#f5921e] text-sm font-semibold not-italic mt-2 block">
-                — Memories by Lee Travels
+                Memories by Lee Travels
               </cite>
             </motion.blockquote>
 

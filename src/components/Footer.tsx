@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Phone, Facebook, Instagram, Twitter, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Facebook, Instagram, Twitter, MessageCircle } from "lucide-react";
 
 const WA_NUMBER = "255742243243";
 const WA_MESSAGE = encodeURIComponent(
@@ -48,11 +48,18 @@ export default function Footer() {
                 <Phone size={16} className="text-[#f5921e]" />
                 +255 754 243 207
               </a>
+              <a
+                href="mailto:memoriesbyleetravels@gmail.com"
+                className="flex items-center gap-2 text-white/60 hover:text-white text-sm transition-colors"
+              >
+                <Mail size={16} className="text-[#f5921e]" />
+                memoriesbyleetravels@gmail.com
+              </a>
             </div>
             <div className="flex items-center gap-3">
               {[
                 { icon: Facebook, href: "#", label: "Facebook" },
-                { icon: Instagram, href: "#", label: "Instagram" },
+                { icon: Instagram, href: "https://www.instagram.com/memoriesbylee/", label: "Instagram" },
                 { icon: Twitter, href: "#", label: "Twitter" },
                 {
                   icon: MessageCircle,
@@ -133,7 +140,7 @@ export default function Footer() {
               {[
                 { label: "Zanzibar", href: "/destinations#zanzibar" },
                 { label: "Serengeti", href: "/destinations#serengeti" },
-                { label: "Maldives", href: "/destinations#maldives" },
+                { label: "Mafia Island", href: "/destinations#mafia" },
                 { label: "Dubai", href: "/destinations#dubai" },
                 { label: "Bali", href: "/destinations#bali" },
                 { label: "Turkey", href: "/destinations#turkey" },
@@ -154,11 +161,17 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
-        <div className="section-container py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white/40 text-sm">
+        <div className="section-container py-5 flex flex-col items-center gap-2 sm:flex-row sm:justify-between sm:gap-3">
+          <a
+            href="https://www.driftmark.co.tz/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/40 text-sm hover:text-white/40 transition-colors text-center sm:text-left"
+            style={{ textDecoration: "none" }}
+          >
             © {year} Memories by Lee Travels. All rights reserved.
-          </p>
-          <p className="text-white/40 text-sm italic">
+          </a>
+          <p className="text-white/40 text-sm italic text-center sm:text-right">
             Travel made simple, memorable, and personalized.
           </p>
         </div>

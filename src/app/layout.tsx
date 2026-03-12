@@ -19,11 +19,42 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Memories by Lee Travels | Luxury Travel & Honeymoon Specialists",
+  title: "Memories by Lee Travels | Luxury Travel & Honeymoon Specialists Tanzania",
   description:
-    "Tanzania's premier luxury travel agency. Bespoke honeymoon packages, corporate travel, private charters, and unforgettable experiences. Led by CEO Hellen Rhobi with 10+ years of aviation expertise.",
+    "Tanzania's premier luxury travel agency. Bespoke honeymoon packages to Zanzibar, Mafia Island & beyond, corporate travel, private charters, and unforgettable experiences. Led by CEO Hellen Rhobi with 10+ years of aviation expertise.",
   keywords:
-    "luxury travel Tanzania, honeymoon packages Zanzibar, Tanzania travel agency, private charter flights, corporate travel Tanzania, Memories by Lee",
+    "luxury travel Tanzania, honeymoon packages Zanzibar, Mafia Island Tanzania, Tanzania travel agency, Serengeti safari, private charter flights, corporate travel Tanzania, Memories by Lee, Hellen Rhobi",
+  metadataBase: new URL("https://memoriesbylee.co.tz"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Memories by Lee Travels | Luxury Travel & Honeymoon Specialists",
+    description:
+      "Tanzania's premier luxury travel agency. Bespoke honeymoon packages, safari adventures, and unforgettable journeys curated by aviation expert Hellen Rhobi.",
+    url: "https://memoriesbylee.co.tz",
+    siteName: "Memories by Lee Travels",
+    locale: "en_TZ",
+    type: "website",
+    images: [
+      {
+        url: "/images/HERO IMAGE.png",
+        width: 1200,
+        height: 630,
+        alt: "Memories by Lee Travels — Luxury Travel Tanzania",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Memories by Lee Travels | Luxury Travel Tanzania",
+    description:
+      "Bespoke honeymoon packages, Serengeti safaris, Mafia Island escapes & more. Tanzania's premier luxury travel agency.",
+    images: ["/images/HERO IMAGE.png"],
+  },
+  verification: {
+    google: "googlec84a6bc1ef92d42b",
+  },
   icons: {
     icon: "/images/memories by lee favicon.png",
   },
