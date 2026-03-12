@@ -141,8 +141,8 @@ export default function Footer() {
                 { label: "Zanzibar", href: "/destinations#zanzibar" },
                 { label: "Serengeti", href: "/destinations#serengeti" },
                 { label: "Mafia Island", href: "/destinations#mafia" },
+                { label: "Mikumi National Park", href: "/destinations#mikumi" },
                 { label: "Dubai", href: "/destinations#dubai" },
-                { label: "Bali", href: "/destinations#bali" },
                 { label: "Turkey", href: "/destinations#turkey" },
               ].map((item) => (
                 <li key={item.href}>
