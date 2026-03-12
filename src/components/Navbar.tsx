@@ -64,7 +64,7 @@ export default function Navbar() {
                 alt="Memories by Lee Travels"
                 width={120}
                 height={50}
-                className="h-10 w-auto md:hidden"
+                className="h-14 w-auto md:hidden"
                 priority
               />
             </Link>
