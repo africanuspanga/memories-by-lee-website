@@ -141,11 +141,11 @@ export default function DestinationsSection() {
           </div>
         </div>
 
-        {/* Cards carousel — snap on mobile, free scroll on desktop */}
+        {/* Cards — 2-col grid on mobile, horizontal carousel on desktop */}
         <div
           ref={scrollRef}
           onScroll={handleScroll}
-          className="flex gap-5 overflow-x-auto no-scrollbar pb-4 snap-x snap-mandatory md:snap-none"
+          className="grid grid-cols-2 gap-4 md:flex md:gap-5 md:overflow-x-auto md:no-scrollbar md:pb-4"
         >
           {destinations.map((dest, index) => (
             <motion.div
@@ -154,7 +154,7 @@ export default function DestinationsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
-              className="flex-shrink-0 w-[82vw] sm:w-80 md:w-72 snap-center bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+              className="w-full md:flex-shrink-0 md:w-72 bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
             >
               {/* Image */}
               <div className="relative h-52 overflow-hidden">
@@ -165,28 +165,26 @@ export default function DestinationsSection() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   unoptimized
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent" />
                 {/* Tag */}
-                <span className="absolute top-3 left-3 bg-[#f5921e] text-white text-[11px] font-semibold px-2.5 py-1 rounded-full">
+                <span className="absolute top-3 left-3 bg-[#f5921e] text-white text-[11px] font-semibold px-2.5 py-1 rounded-full shadow-sm">
                   {dest.tag}
                 </span>
                 {/* Rating */}
-                <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full px-2.5 py-1 flex items-center gap-1">
+                <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm rounded-full px-2.5 py-1 flex items-center gap-1 shadow-sm">
                   <Star size={11} className="text-[#f5921e] fill-[#f5921e]" />
                   <span className="text-navy text-xs font-bold">{dest.rating}</span>
-                </div>
-                {/* Name */}
-                <div className="absolute bottom-3 left-3">
-                  <div className="flex items-center gap-1 text-white/80 text-xs mb-0.5">
-                    <MapPin size={11} />
-                    {dest.country}
-                  </div>
-                  <p className="text-white font-bold text-xl">{dest.name}</p>
                 </div>
               </div>
 
               {/* Card body */}
               <div className="p-5">
+                <div className="mb-3">
+                  <h3 className="text-navy font-bold text-lg leading-tight">{dest.name}</h3>
+                  <div className="flex items-center gap-1 text-gray-400 text-xs mt-0.5">
+                    <MapPin size={11} />
+                    {dest.country}
+                  </div>
+                </div>
                 <p className="text-gray-500 text-sm leading-relaxed mb-4">{dest.description}</p>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1">
