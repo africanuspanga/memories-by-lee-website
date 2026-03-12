@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { Star, Clock, MapPin } from "lucide-react";
+import { Star, Clock, MapPin, Heart, Waves, Sparkles } from "lucide-react";
 import SectionDivider from "@/components/SectionDivider";
 
 const WA_NUMBER = "255742243243";
@@ -125,22 +125,60 @@ const destinations = [
     color: "blue",
   },
   {
-    id: "mafia-island",
-    name: "Mafia Island",
+    id: "mikumi",
+    name: "Mikumi National Park",
     country: "Tanzania",
-    rating: 4.9,
+    rating: 4.7,
     description:
-      "Tanzania's best-kept secret. Mafia Island is an untouched paradise of crystal-clear waters, vibrant coral reefs, and pristine white-sand beaches — free from the crowds. Dive with whale sharks, explore mangrove forests, and experience raw, authentic Tanzania.",
+      "Tanzania's most accessible national park and a hidden safari gem. Mikumi's open floodplains teem with elephant herds, lion prides, zebra, and giraffe — offering a classic African safari experience without the crowds of the Serengeti.",
     highlights: [
-      "Whale Shark Diving",
-      "Chole Bay Marine Park",
-      "Pristine Coral Reefs",
-      "Mangrove Forests",
-      "Remote Beach Seclusion",
+      "Elephant Herds",
+      "Open Flood Plains",
+      "Lion & Leopard Sightings",
+      "Buffalo Pools",
+      "Birding Paradise",
     ],
-    bestFor: ["Diving & Snorkeling", "Beach Escape", "Off-the-Beaten-Path"],
-    duration: "4–7 days recommended",
-    image: "/images/mafia island.jpg",
+    bestFor: ["Wildlife Safari", "Photography", "Quick Getaway"],
+    duration: "2–4 days recommended",
+    image: "/Mikumi.jpg",
+    color: "orange",
+  },
+  {
+    id: "ruaha",
+    name: "Ruaha National Park",
+    country: "Tanzania",
+    rating: 4.8,
+    description:
+      "Tanzania's largest national park — and one of Africa's finest, most untouched safari destinations. Ruaha is home to the continent's largest elephant population, elusive wild dogs, and countless lion prides. Remote, raw, and utterly magnificent.",
+    highlights: [
+      "Largest Elephant Population",
+      "African Wild Dogs",
+      "Remote Wilderness",
+      "Ruaha River Game Viewing",
+      "Exclusive Tented Camps",
+    ],
+    bestFor: ["Off-the-Beaten-Path", "Big Game", "Exclusivity"],
+    duration: "4–6 days recommended",
+    image: "/Ruaha.jpg",
+    color: "blue",
+  },
+  {
+    id: "saadani",
+    name: "Saadani National Park",
+    country: "Tanzania",
+    rating: 4.6,
+    description:
+      "Africa's only national park where the bush meets the beach. Saadani is a wonderfully unique destination — morning game drives tracking lion and buffalo, afternoons snorkelling in the Indian Ocean, and sundowners on a pristine, deserted shoreline.",
+    highlights: [
+      "Bush Meets Beach",
+      "Game Drives & Snorkeling",
+      "Hippo & Crocodile River",
+      "Green Turtle Nesting",
+      "Pristine Deserted Beach",
+    ],
+    bestFor: ["Unique Experience", "Beach & Safari", "Nature Lovers"],
+    duration: "3–5 days recommended",
+    image: "/saadani.jpg",
     color: "orange",
   },
 ];
@@ -291,8 +329,133 @@ export default function DestinationsPage() {
         </div>
       </section>
 
+      {/* ── Mafia Island Special Feature Section ── */}
+      <section className="relative overflow-hidden bg-navy">
+        {/* Full-bleed background image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/mafia for mafia section.jpg"
+            alt="Mafia Island — Tanzania's Undiscovered Paradise"
+            fill
+            className="object-cover"
+            unoptimized
+          />
+          {/* Dark gradient overlay — stronger on left for text legibility */}
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent" />
+        </div>
+
+        <div className="section-container relative z-10 py-28 lg:py-36">
+          <div className="max-w-2xl">
+            {/* Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="inline-flex items-center gap-2 bg-[#f5921e]/15 border border-[#f5921e]/40 text-[#f5921e] text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6"
+            >
+              <Sparkles size={13} />
+              Africa&apos;s Undiscovered Gem
+            </motion.div>
+
+            {/* Headline */}
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
+            >
+              Mafia Island —{" "}
+              <span className="text-[#f5921e]">A Couple&apos;s Paradise</span>{" "}
+              Like No Other
+            </motion.h2>
+
+            {/* Body copy */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="text-white/75 text-lg leading-relaxed mb-8"
+            >
+              While the world rushes to Zanzibar, Mafia Island waits — untouched,
+              unhurried, and breathtakingly beautiful. This is where couples come to
+              truly disappear. Powder-white beaches that stretch to the horizon,
+              crystal-clear Indian Ocean waters, and some of the most intimate
+              boutique hotels in all of Africa. No crowds. No noise. Just you,
+              your partner, and a paradise that feels like it was made for two.
+            </motion.p>
+
+            {/* Highlight pills */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="flex flex-wrap gap-3 mb-10"
+            >
+              {[
+                { icon: <Waves size={14} />, label: "Pristine Private Beaches" },
+                { icon: <Heart size={14} />, label: "Romantic Boutique Hotels" },
+                { icon: <Star size={14} />, label: "Whale Shark Diving" },
+                { icon: <Sparkles size={14} />, label: "Secluded Honeymoon Escape" },
+              ].map((pill) => (
+                <span
+                  key={pill.label}
+                  className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/90 text-sm font-medium px-4 py-2 rounded-full backdrop-blur-sm"
+                >
+                  <span className="text-[#f5921e]">{pill.icon}</span>
+                  {pill.label}
+                </span>
+              ))}
+            </motion.div>
+
+            {/* Pull quote */}
+            <motion.blockquote
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.35 }}
+              className="border-l-4 border-[#f5921e] pl-5 mb-10"
+            >
+              <p className="text-white/60 italic text-base leading-relaxed">
+                &ldquo;The honeymoon hotspot the world hasn&apos;t discovered yet — and
+                we want to keep it that way. We&apos;ll take you there before everyone else does.&rdquo;
+              </p>
+              <cite className="text-[#f5921e] text-sm font-semibold not-italic mt-2 block">
+                — Memories by Lee Travels
+              </cite>
+            </motion.blockquote>
+
+            {/* CTAs */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="flex flex-wrap gap-4"
+            >
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-[#f5921e] text-white font-bold px-8 py-4 rounded-full hover:bg-[#d97a10] transition-all duration-200 hover:scale-105 shadow-2xl shadow-orange-500/30 text-base"
+              >
+                <Heart size={16} />
+                Plan Our Mafia Island Escape
+              </Link>
+              <Link
+                href="/honeymoon"
+                className="inline-flex items-center gap-2 border-2 border-white/30 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/10 transition-all duration-200 text-base backdrop-blur-sm"
+              >
+                View Honeymoon Packages →
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
-      <section className="py-20 bg-navy">
+      <section className="py-20 bg-navy border-t border-white/5">
         <div className="section-container text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
