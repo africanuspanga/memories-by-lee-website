@@ -60,12 +60,12 @@ export default function MafiaSpotlightSection() {
             transition={{ delay: 0.2 }}
             className="text-white/75 text-lg leading-relaxed mb-8"
           >
-            While the world rushes to Zanzibar, Mafia Island waits. Untouched,
-            unhurried, and breathtakingly beautiful. This is where couples come
-            to truly disappear. Powder-white beaches stretching to the horizon,
-            crystal-clear Indian Ocean waters, and some of the most intimate
-            boutique hotels in all of Africa. No crowds. No noise. Just you,
-            your partner, and a paradise made for two.
+            Mafia Island is Tanzania&apos;s best-kept secret: powder-white
+            beaches, crystal-clear Indian Ocean waters, and some of the most
+            intimate boutique resorts in all of Africa. This is where couples
+            come to celebrate love in its most beautiful setting. World-class
+            whale shark diving, private beach sundowners, and a pace of life so
+            gentle it feels like the island was made just for the two of you.
           </motion.p>
 
           {/* Highlight pills */}
