@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "Tanzania's premier luxury travel agency. Bespoke honeymoon packages to Zanzibar, Mafia Island & beyond, corporate travel, private charters, and unforgettable experiences. Led by CEO Hellen Rhobi with 10+ years of aviation expertise.",
   keywords:
     "luxury travel Tanzania, honeymoon packages Zanzibar, Mafia Island Tanzania, Tanzania travel agency, Serengeti safari, private charter flights, corporate travel Tanzania, Memories by Lee, Hellen Rhobi",
-  metadataBase: new URL("https://memoriesbylee.co.tz"),
+  metadataBase: new URL("https://www.memoriesbylee.com"),
   alternates: {
     canonical: "/",
   },
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "Memories by Lee Travels | Luxury Travel & Honeymoon Specialists",
     description:
       "Tanzania's premier luxury travel agency. Bespoke honeymoon packages, safari adventures, and unforgettable journeys curated by aviation expert Hellen Rhobi.",
-    url: "https://memoriesbylee.co.tz",
+    url: "https://www.memoriesbylee.com",
     siteName: "Memories by Lee Travels",
     locale: "en_TZ",
     type: "website",
@@ -67,6 +67,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={poppins.variable}>
+      <head>
+        <meta name="google-site-verification" content="googlec84a6bc1ef92d42b" />
+      </head>
       <body className={`${poppins.className} antialiased`}>
         <Navbar />
         <main>{children}</main>
