@@ -26,12 +26,28 @@ const inclusions = [
 
 const packages = [
   {
+    id: "mafia",
+    name: "Mafia Island Secret Escape",
+    location: "Mafia Island, Tanzania",
+    duration: "4–7 Days",
+    tag: "Our Top Pick",
+    tagColor: "orange",
+    highlights: [
+      "Secluded boutique resort",
+      "Whale shark snorkelling",
+      "Private beach sundowners",
+      "Untouched paradise vibes",
+    ],
+    image: "/BLACK COUPLE IN MAFIA.jpg",
+    unoptimized: true,
+  },
+  {
     id: "zanzibar",
     name: "Zanzibar Beach Bliss",
     location: "Zanzibar, Tanzania",
     duration: "5–7 Days",
     tag: "Most Popular",
-    tagColor: "orange",
+    tagColor: "blue",
     highlights: [
       "Beachfront villa",
       "Sunset dhow cruise",
@@ -114,6 +130,21 @@ const packages = [
       "Table Mountain sunrise",
     ],
     image: "/images/DESTINATION SOUTH AFRICA HONEY MOON.jpg",
+  },
+  {
+    id: "mikumi",
+    name: "Mikumi Safari Romance",
+    location: "Mikumi, Tanzania",
+    duration: "2–4 Days",
+    tag: "Quick Getaway",
+    tagColor: "orange",
+    highlights: [
+      "Elephant & lion sightings",
+      "Luxury lodge stay",
+      "Private game drives",
+      "Starlit bush dinners",
+    ],
+    image: "/Mikumi.jpg",
   },
 ];
 
@@ -283,6 +314,7 @@ export default function HoneymoonPage() {
                       alt={pkg.name}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      unoptimized={"unoptimized" in pkg ? pkg.unoptimized : false}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy/50 to-transparent" />
                     <span
