@@ -565,7 +565,6 @@ Special Requests: ${form.requests || "None"}`;
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
             {categories.map((cat, i) => {
-              const Icon = cat.icon;
               const isOrange = cat.color === "orange";
               return (
                 <motion.div key={cat.name} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
